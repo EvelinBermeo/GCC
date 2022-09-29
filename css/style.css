@@ -33,7 +33,7 @@ a{
     grid-column: 4/11;
 }
 .logo{
-    content: url("/img/banner1.png");
+ 
     display: inline-block;
     color: var(--white);
     padding: 10px 25px ;
@@ -127,7 +127,7 @@ a{
 }
 .cta {
     display: inline-block;
-    background-color: #e720f9;
+    background-color: var(--blue);
     justify-self: center;
     color: #fff;
     text-decoration: none;

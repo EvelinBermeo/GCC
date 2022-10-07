@@ -33,7 +33,6 @@ a{
     grid-column: 4/11;
 }
 .logo{
- 
     display: inline-block;
     color: var(--white);
     padding: 10px 25px ;
@@ -150,7 +149,7 @@ a{
     text-align: center;
     margin-bottom: 10px;
   }
-  /* The Close Button */
+  
   .close, .close2 {
     color: #aaa;
     float: right;
@@ -296,12 +295,13 @@ a{
 .knowledge__container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1em;
     align-items: center;
+    background: var(--blue) ;
 }
 
 .knowledge__picture{
-    max-width: 500px;
+    max-width: 100%;
+    display: inline-block;
 }
 
 .knowledge__paragraph{
@@ -311,13 +311,17 @@ a{
 }
 
 .knowledge__img{
-    padding-left: 50px;
     width: 500px;
     display: block;
-    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 48%, 0% 0%);
+    /* clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 48%, 0% 0%); */
 }
+.knowledege__texts {
+    
+}
+
 .knowledge__paragraph {
-    font-size: 1.4em;
+    font-size: 1.1em;
+    color: var(--white);
 }
 .footer{
     background-color: #3060a2;
@@ -483,11 +487,9 @@ a{
         grid-template-rows: max-content max-content;
         gap: 3em;
     }
-    .knowledge__paragraph {
-        
-        width: 200px;
-        height: 200px;
-        display: block
+  
+    .knowledge__picture{
+        max-width: 100%;
     }
 }
 

@@ -1,3 +1,29 @@
+//menu desplegable
+$(document).ready(main);
+
+var contador = 1;
+
+function main() {
+    $('.menu').click(function(){
+        if (contador == 1) {
+            $('nav').animate ({
+                left: '0'
+            });
+            contador = 0;
+        }
+        else {
+            contador = 1;
+            $('nav').animate ({
+                left: '-100%'
+            });
+        }
+    });
+    $('.submenu').click(function() {
+        $(this).children('.children').slideToggle();
+    });
+}
+
+//slider nivel
 (function(){
 
     const sliders = [...document.querySelectorAll('.testimony__body')];
@@ -30,6 +56,7 @@
 
 })();
 
+//modal misión visión
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];

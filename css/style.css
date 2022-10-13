@@ -1,10 +1,10 @@
 :root{
-    --white: #f9f9f9;
+    --white: rgb(241, 241, 246);
     --black: #1e1f23;
     --gray: #85888C;
     --blue: #001A49;
     --orange: #e6390e;
-    --padding-container: 100px 0;
+    --padding-container:s 100px 0;
     --color-title: #001A49;
 } 
 *{
@@ -16,12 +16,20 @@ body{
     background-color: var(--white);
     font-family: "Poppins", sans-serif;
 }
-a{
-    text-decoration: none;
-}
-.menu{
+
+/* .menu{
     list-style: none;
     font-size: 1.1em;
+}
+.menu a{
+    text-decoration: none;
+    display: block;
+}
+.menu ul li ul {
+    display: none;
+}
+.menu ul li a:hover + ul, .menu ul li ul:hover {
+    display: block;
 }
 .menu-navigation{
     background-color: var(--white);
@@ -31,20 +39,8 @@ a{
     width: 100%;
     z-index: 100;
     grid-column: 4/11;
-}
-.logo{
-    display: inline-block;
-    color: var(--white);
-    padding: 10px 25px ;
-    display: grid;
-    grid-column: 1/3;
-    display: inline-block;
-}
-.login {
-    width: 30px;
-    filter: brightness(0) saturate(100%) invert(11%) sepia(94%) saturate(1431%) hue-rotate(201deg) brightness(88%) contrast(110%);
-    cursor: pointer;
 } 
+
 .nav{
     width: 100%;
     height: 100%;
@@ -55,7 +51,7 @@ a{
 .menu a{
     display: block;
     margin: 20px 15px ;
-    color: var(--blue);
+    color: var(--blue);float
     font-weight: 500;
 }
 .menu a:hover{
@@ -93,7 +89,7 @@ a{
     top: -5px;
 }
 
-.side-menu {
+.side-menu {o
     display: none;
 } 
 .side-menu:checked ~ nav{
@@ -109,11 +105,85 @@ a{
 .side-menu:checked ~ .hamb .hamb-line::after {
     transform: rotate(45deg);
     top:0;
+}*/
+.logo {
+    float: left;
+    padding: 5px 2px 5px 2px;
 }
+.menu{
+    display: none;
+}
+header {
+    width: 100%;
+}
+header nav {
+    background-color: var(--white);
+    width: 100%;
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: fixed;
+    z-index: 100;
+    text-align: right;
+}
+nav ul {
+    list-style: none;
+    display: inline-block;
+    margin: 5px;
+}
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+nav ul li:hover {
+    background: rgb(241, 241, 246);
+}
+nav ul li a {
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--blue);
+    display: block;
+    text-decoration: none;
+    padding: 20px 3px ;
+}
+nav ul li .children {
+  display: none;
+  position: absolute;
+  background:  rgb(242, 242, 247);
+  text-align: left;
+}
+nav ul li:hover .children {
+    display: block;
+    width: 100%;
+    text-align: left;
+} 
+nav ul li .children li {
+    overflow: hidden;
+    display: block;
+    border-bottom:  1px solid rgba(210, 202, 202, 0.5);
+}
+nav ul li .children li a {
+    display: block;
+}
+nav ul li span {
+    margin-right: 10px;
+}
+nav ul li .children li a span {
+    float: right;
+    position: relative;
+    top: 3px;
+    margin-right: 0;
+    margin-left: 0;
+}
+nav ul li .icon-chevron-small-down {
+    position: relative;
+    top: 3px;
+    margin-left: 10px;
+}
+
 .img-p {
     width: 100%;
     display: inline-block;
-    margin-top: 60px;
+    margin-top: 50px;
     margin-bottom: 40px;
 }
 
@@ -138,7 +208,7 @@ a{
     width: 80%; 
   }
   .modal-text {
-    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-family: "Poppins", Verdana, sans-serif;
     line-height: 25px;
     text-align: justify;
     padding: 5px 10px;
@@ -306,7 +376,7 @@ a{
 
 .knowledge__paragraph{
     line-height: 1.7;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-size: 1.7em;
 }
 
@@ -315,10 +385,6 @@ a{
     display: block;
     /* clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 48%, 0% 0%); */
 }
-.knowledege__texts {
-    
-}
-
 .knowledge__paragraph {
     font-size: 1.1em;
     color: var(--white);
@@ -412,7 +478,69 @@ a{
 /* Media queries */
 
 @media (max-width:800px){
-    .nav {
+    .logo {
+        display: none;
+    }
+    .menu {
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background: var(--white);
+        box-shadow: 1px 1px 5px 0px var(--gray);
+    }
+    .menu .bt-menu {
+        display: block;
+        color: #fff;
+        overflow: hidden;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .menu span {
+        float: right;
+        font-size: 40px;
+    }
+    header nav {
+        width: 50%;
+        margin-top: 57px;
+        height: calc(100% - 60px);
+        position: fixed;
+        right: 100%;
+        overflow: scroll;
+    }
+    header nav ul {
+        text-align: left;
+        float: left;
+    }
+    header nav ul li {
+        display:  block;
+        border-bottom: 1px solid rgba(178, 169, 169, 0.5);
+    }
+    header nav ul li a {
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        padding: 15px 100px 15px 0  ;
+        display: block;
+    }
+    header nav ul li .children {
+        position: relative;
+        width: 100%;
+        background: rgb(242, 237, 237);
+    }
+    header nav ul li .children li a {
+        margin-left: 20px;
+    }
+    header ul li .icon-chevron-small-down {
+        float: right;
+    }
+    nav ul li:hover .children {
+        display: block;
+
+    }
+
+    /* .nav {
        background-color:  var(--white);
     }
     .nav__menu{
@@ -444,7 +572,7 @@ a{
     }
     .nav__close{
         position: absolute;
-        top: 30px;
+        top: 30px;menu
         right: 30px;
         width: 30px;
         cursor: pointer;
@@ -457,13 +585,18 @@ a{
         padding: 10px 5px;
         margin: 0;
     }
+
+    .hamb {
+        padding: 30px 20px;
+    } */
+    .img-p {
+        width: 100%;
+        display: inline-block;
+    }
     .img-modal {
         width: 100%;
         display: inline-block;
       }
-    .hamb {
-        padding: 30px 20px;
-    }
     .testimony__body {
         grid-template-columns: 1fr;
         grid-template-rows: max-content max-content;
@@ -494,30 +627,4 @@ a{
 }
 
 @import url('https://fonts.googleapis.com/css2?family-Poppins:wgth@300;400;700&display=swap');
-@media (min-width: 800px) {
-    .nav{
-        max-height: none;
-        top: 0;
-        position: relative;
-        float: right;
-        width: fit-content;
-    }
-    .menu li{
-        float: left;
-    }
-    .menu a:hover{
-        background-color: var(--white);
-        color: var(--gray);
-    }
-    .hamb{
-        display: none;
-    }
-}
-@media (max-width: 600px) {
-    .testimony {
-        --padding-container: 60px 0; 
-    }
-}
 
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); 

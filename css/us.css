@@ -228,7 +228,7 @@ nav ul li .icon-chevron-small-down {
 }
 @media screen and (max-width: 800px) {
     body {
-        padding-top: 70px;
+        padding-top: 80px;
     }
     /* menú responsive */
     .logo {

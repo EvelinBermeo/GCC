@@ -55,7 +55,7 @@ nav ul li a {
     color: var(--blue);
     display: block;
     text-decoration: none;
-    padding: 30px 6px;
+    padding: 20px 4px;
 }
 nav ul li .children {
   display: none;

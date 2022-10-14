@@ -55,7 +55,7 @@ nav ul li a {
     color: var(--blue);
     display: block;
     text-decoration: none;
-    padding: 20px 4px;
+    padding: 25px 4px;
 }
 nav ul li .children {
   display: none;
@@ -102,7 +102,7 @@ nav ul li .icon-chevron-small-down {
 .img-p2 {
     display: none;
 }
-.title {
+.tagline {
     color: var(--orange);
     font-size: 1.8em;
     text-align: center;
@@ -174,6 +174,13 @@ nav ul li .icon-chevron-small-down {
     border: none;
 }
 
+.title h2 {
+    font-weight: 800;
+    font-size: 47px;
+    color: var(--orange)!important;
+    text-align: center;
+    text-shadow: 0.04em 0.08em 0.08em rgb(0 0 0 / 40%);
+}
 .testimony{
     background-color: rgba(187, 187, 216, 0.096);
     justify-content: center;
@@ -222,6 +229,7 @@ nav ul li .icon-chevron-small-down {
 
 .testimony__course{
     color: #001A49;
+    text-shadow: 0.04em 0.08em 0.08em rgb(0 0 0 / 40%);
     display: inline-block;
     padding: 8px;
 }
@@ -238,15 +246,23 @@ nav ul li .icon-chevron-small-down {
     color: #001A49;
     cursor: pointer;
 }
-.title {
-    color: var(--orange);
+.tagline {
     font-size: 1.8em;
     text-align: center;
     margin-bottom: 25px;
+    font-weight: 800;
+    color: var(--orange)!important;
+    text-shadow: 0.04em 0.08em 0.08em rgb(0 0 0 / 40%);
 }
 .subtitle {
     color: var(--color-title);
     font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.title-level {
+    color: var(--black);
+    font-size: 1.2em;
     text-align: center;
     margin-bottom: 25px;
 }
@@ -416,12 +432,12 @@ nav ul li .icon-chevron-small-down {
         background: var(--white);
         box-shadow: 1px 1px 5px 0px var(--gray);
     }
-    .menu .bt-menu {
+    img.bt-img {
+        width: 40px;
+        filter: brightness(0) saturate(100%) invert(11%) sepia(94%) saturate(1431%) hue-rotate(201deg) brightness(88%) contrast(110%);
         float: right;
-        padding: 15px 10px;
-        color: var(--blue);
+        padding: 10px 10px;
         overflow: hidden;
-        text-decoration: none;
     }
     .menu .img-menu {
         padding: 5px 10px;
@@ -475,15 +491,34 @@ nav ul li .icon-chevron-small-down {
     .img-modal {
         width: 100%;
         display: inline-block;
-      }
+    }
+    .title h2 {
+        font-weight: 700;
+        font-size: 1.9em;
+        color: var(--orange)!important;
+        text-align: center;
+        text-shadow: 0.04em 0.08em 0.08em rgb(0 0 0 / 40%);
+    }
+    .subtitle {
+        font-size: 1.2em;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .title-level {
+    color: var(--black);
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 0;
+    }
     .testimony__body {
         grid-template-columns: 1fr;
         grid-template-rows: max-content max-content;
-        gap: 3em;
+        gap: .1em;
         justify-items: center;
     }
     .testimony__container {
         grid-template-columns: 30px 1fr 30px;
+        margin-top: 0;
     }
     .testimony__img {
         width: 200px;

@@ -99,6 +99,9 @@ nav ul li .icon-chevron-small-down {
     margin-top: 60px;
     margin-bottom: 40px;
 }
+.img-p2 {
+    display: none;
+}
 .title {
     color: var(--orange);
     font-size: 1.8em;
@@ -460,8 +463,11 @@ nav ul li .icon-chevron-small-down {
     nav ul li:hover .children {
         display: none;
     }
-       /* imagen principal */
-       .img-p {
+    /* imagen principal */
+    .img-p {
+    display: none;
+    }
+    .img-p2 {
         margin: 0;
         width: 100%;
         display: inline-block;

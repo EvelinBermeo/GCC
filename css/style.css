@@ -453,7 +453,11 @@ nav ul li .icon-chevron-small-down {
     border-bottom: 1px solid #fff;
     padding-bottom: 60px;
 }
-
+.footer__img {
+    width: 120px;
+    filter: brightness(0) saturate(100%) invert(11%) sepia(94%) saturate(1431%) hue-rotate(201deg) brightness(88%) contrast(100%);
+    cursor: pointer;
+}
 .nav--footer{
     padding-bottom: 20px;
     display: grid;
